@@ -15,6 +15,17 @@
   --font-serif: "DM Serif Text", serif;
 }
 
+@layer utilities {
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
 html,
 body {
   width: 100%;
@@ -22,6 +33,7 @@ body {
   color: white;
   scroll-behavior: smooth;
   overflow-x: hidden;
+  scrollbar-width: none;
 }
 
 @utility flex-center {
